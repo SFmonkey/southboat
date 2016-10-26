@@ -1,12 +1,18 @@
 @font-face {font-family: 'Open Sans';
-    src: url('//at.alicdn.com/t/ay6dpkcs7j3mobt9.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/ay6dpkcs7j3mobt9.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/ay6dpkcs7j3mobt9.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/ay6dpkcs7j3mobt9.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/ay6dpkcs7j3mobt9.svg#思源黑体-细') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/bpoez3rdh2w97ldi.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/bpoez3rdh2w97ldi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/bpoez3rdh2w97ldi.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/bpoez3rdh2w97ldi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/bpoez3rdh2w97ldi.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: 'lanting';
+    src: url('../fonts/MI-LANTING.ttf') format('truetype') /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+@font-face {font-family: 'xiaozhong';
+    src: url('../fonts/KozMinStd-ExtraLight.otf') format('OpenType') /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
 body{
-    font-family: "tahoma",sans-serif;
+    font-family: "Helvetica","lanting",sans-serif;
 }
 .promo-wrapper{
     background:url( ../images/background2.jpg) no-repeat center center;
@@ -14,11 +20,25 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 720px;
 }
-
+.promo-wrapper:before{
+    background-color:rgba(0,0,0,.6);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.full-height{
+    height:100vh;
+}
 .navbar{
     /*background-color: #fff;*/
+    position:absolute;
+    width: 100%;
+    z-index: 1030;
     min-height: 70px;
     padding-top: 28px;
     padding-bottom: 10px;
@@ -74,7 +94,7 @@ nav a{
     padding-top:200px;
 }
 .promo .intro h2.title {
-    font-family: "Open Sans",sans-serif;
+    font-family: "Helvetica",sans-serif;
     color: #fff;
     font-weight: 100;
     font-size: 40px;
@@ -95,7 +115,7 @@ nav a{
     margin-right: 15px;
     background: rgba(4,159,187,.7);
     border: 2px solid rgba(4,159,187,.7);
-    color: #fff;
+    color: #F7F7D5;
 }
 .promo .intro .btn-wrapper .btn-cta:hover {
     background: #049fbb;
@@ -110,13 +130,19 @@ nav a{
     padding: 8px 32px;
     font-weight: 600;
 }
-@media (max-width: 767px){
+@media (max-width: 768px){
+    .promo .intro{
+        padding-top:300px;
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 420px){
     .promo-wrapper {
         min-height: 420px;
         background:url( ../images/background2.jpg) no-repeat center center;
     }
     .promo .intro{
-        padding-top:50px;
+        padding-top:280px;
         padding-bottom: 30px;
     }
     .promo .intro h2.title {
@@ -138,6 +164,23 @@ nav a{
         margin-right: 0
     }
 }
+@media (min-width: 769px){
+    .promo .intro{
+        padding-top:200px;
+    }
+}
+@media (max-width: 320px){
+    .promo .intro{
+        padding-top:40px;
+        padding-bottom: 30px;
+    }
+    .nav>li {
+        font-size: 12px;
+        position: relative;
+        display: block;
+        height: 25px;
+    }
+}
 .what-we-do{
     padding: 80px;
 }
@@ -145,12 +188,6 @@ nav a{
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 15px
-}
-.what-we-do .summary{
-    font-size: 18px;
-    font-weight: 300;
-    color: #666;
-    line-height: 2;
 }
 .highlight{
     margin-top: 40px;
@@ -163,11 +200,35 @@ nav a{
     margin-bottom: 10px;
     color: #049fbb;
 }
-.h-body p{
+.h-body{
+    margin: 0 auto;
+}
+.h-body div{
+    font-family: 'xiaozhong',sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: #666;
-    line-height: 2;
+    line-height: 1.5;
+}
+@media (min-width: 768px){
+    .h-body div {
+        width: 1.5em;
+        float: left;
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.5;
+    }
+}
+@media (min-width: 992px){
+    .h-body div {
+        width: 1.5em;
+        float: left;
+        font-size: 18px;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.5;
+    }
 }
 .the-boat-mean{
     background: #fff;
@@ -218,6 +279,7 @@ nav a{
 }
 .navbar-fixed-top {
     background: #fff;
+
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
     box-shadow: 0 0 4px rgba(0, 0, 0, .5);
@@ -232,13 +294,20 @@ nav a{
 .breadcrumb {
     background: none;
     padding: 0;
-    margin: 30px 0 0 0;
+    margin: 130px 0 0 0;
 }
 .page-header {
     padding-left: 15px;
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
+    color: #777;
+}
+.page-header a{
+    color: #777;
+}
+.page-header a:hover{
+    color: #049fbb;
 }
 .sidebar {
     padding-top: 20px;
@@ -315,4 +384,45 @@ aside .widget h2{
 }
 .social_link a{
     color: #337ab7;
+}
+.slogan{
+    font-size: 40px;
+    line-height: 40px;
+}
+@media (max-width: 992px){
+    .slogan{
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 2.6;
+    }
+    .what-we-do .summary {
+        font-size: 16px;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.9;
+    }
+}
+@media (max-width: 767px){
+    .slogan{
+        display: none;
+    }
+    .what-we-do .summary {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.5;
+    }
+}
+@media (min-width: 992px){
+    .slogan {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+    .what-we-do .summary{
+        font-size: 18px;
+        font-weight: 300;
+        color: #666;
+        line-height: 2;
+    }
 }

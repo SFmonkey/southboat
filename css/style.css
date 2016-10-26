@@ -8,8 +8,11 @@
 @font-face {font-family: 'lanting';
     src: url('../fonts/MI-LANTING.ttf') format('truetype') /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 }
+@font-face {font-family: 'xiaozhong';
+    src: url('../fonts/KozMinStd-ExtraLight.otf') format('OpenType') /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
 body{
-    font-family: "lanting",sans-serif;
+    font-family: "Helvetica","lanting",sans-serif;
 }
 .promo-wrapper{
     background:url( ../images/background2.jpg) no-repeat center center;
@@ -33,6 +36,9 @@ body{
 }
 .navbar{
     /*background-color: #fff;*/
+    position:absolute;
+    width: 100%;
+    z-index: 1030;
     min-height: 70px;
     padding-top: 28px;
     padding-bottom: 10px;
@@ -136,7 +142,7 @@ nav a{
         background:url( ../images/background2.jpg) no-repeat center center;
     }
     .promo .intro{
-        padding-top:100px;
+        padding-top:280px;
         padding-bottom: 30px;
     }
     .promo .intro h2.title {
@@ -198,6 +204,7 @@ nav a{
     margin: 0 auto;
 }
 .h-body div{
+    font-family: 'xiaozhong',sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: #666;
@@ -272,6 +279,7 @@ nav a{
 }
 .navbar-fixed-top {
     background: #fff;
+
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
     box-shadow: 0 0 4px rgba(0, 0, 0, .5);
@@ -286,13 +294,20 @@ nav a{
 .breadcrumb {
     background: none;
     padding: 0;
-    margin: 30px 0 0 0;
+    margin: 130px 0 0 0;
 }
 .page-header {
     padding-left: 15px;
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
+    color: #777;
+}
+.page-header a{
+    color: #777;
+}
+.page-header a:hover{
+    color: #049fbb;
 }
 .sidebar {
     padding-top: 20px;

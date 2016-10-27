@@ -66,6 +66,9 @@ $(function(){
         }else{
             l2 = parseInt(data.radio.length/6+1);
         }
+        $('#pager_7').html(1);
+        $('.page-title a:first').addClass('active');
+        $('.page-title a:last').removeClass('active');
         $('#pager_2').css("display","none");
         $('#pager_1').css("display","");
         $("#pager_1 .previous").addClass('disabled');
@@ -84,6 +87,7 @@ $(function(){
                 i++;
                 return 0;
             }
+            $('#pager_7').html(i);
             $('#pager_1 .next').removeClass('disabled');
             $('.article_page_'+(i+1)).css("display","none");
             if(i===1){
@@ -97,6 +101,7 @@ $(function(){
                 i--;
                 return 0;
             }
+            $('#pager_7').html(i);
             $('#pager_1 .previous').removeClass('disabled');
             $('.article_page_'+(i-1)).css("display","none");
             if(i===l1){
@@ -117,6 +122,9 @@ $(function(){
         }else{
             l1 = parseInt(data.radio.length/6+1);
         }
+        $('#pager_7').html(1);
+        $('.page-title a:first').removeClass('active');
+        $('.page-title a:last').addClass('active');
         $('#pager_1').css("display","none");
         $('#pager_2').css("display","");
         $('.previous').addClass('disabled');
@@ -138,6 +146,7 @@ $(function(){
                 r++;
                 return 0;
             }
+            $('#pager_8').html(i);
             $('#pager_2 .next').removeClass('disabled');
             $('.radio_page_'+(r+1)).css("display","none");
             if(r===1){
@@ -151,6 +160,7 @@ $(function(){
                 r--;
                 return 0;
             }
+            $('#pager_8').html(i);
             $('#pager_2 .previous').removeClass('disabled');
             $('.radio_page_'+(r-1)).css("display","none");
             if(r===l1){

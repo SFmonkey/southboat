@@ -15,7 +15,7 @@ body{
     font-family: "Helvetica","lanting",sans-serif;
 }
 .promo-wrapper{
-    background:url( ../images/background2.jpg) no-repeat center center;
+    background:url( ../images/background.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -82,10 +82,6 @@ nav a{
     color: #049fbb;
     background: 0 0;
 }
-/*header {*/
-    /*height: 650px;*/
-    /*width: 100%;*/
-/*}*/
 .promo{
     position: relative;
 }
@@ -130,6 +126,16 @@ nav a{
     padding: 8px 32px;
     font-weight: 600;
 }
+.h-body{
+    margin: 0 auto;
+}
+.h-body div{
+    font-family: 'xiaozhong',sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.5;
+}
 @media (max-width: 768px){
     .promo .intro{
         padding-top:300px;
@@ -139,10 +145,10 @@ nav a{
 @media (max-width: 420px){
     .promo-wrapper {
         min-height: 420px;
-        background:url( ../images/background2.jpg) no-repeat center center;
+        background:url( ../images/background.jpg) no-repeat center center;
     }
     .promo .intro{
-        padding-top:280px;
+        padding-top:150px;
         padding-bottom: 30px;
     }
     .promo .intro h2.title {
@@ -163,6 +169,22 @@ nav a{
         margin-bottom: 15px;
         margin-right: 0
     }
+    .navbar{
+        background-color: #232323;
+    }
+    .h-body{
+        margin:20px auto;
+    }
+    .jumbotron p {
+        padding: 0 40px;
+    }
+    .h-body div{
+        font-family: 'lanting',sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.5;
+    }
 }
 @media (min-width: 769px){
     .promo .intro{
@@ -182,7 +204,7 @@ nav a{
     }
 }
 .what-we-do{
-    padding: 80px;
+    padding: 60px;
 }
 .what-we-do .title {
     font-size: 36px;
@@ -200,22 +222,15 @@ nav a{
     margin-bottom: 10px;
     color: #049fbb;
 }
-.h-body{
-    margin: 0 auto;
-}
-.h-body div{
-    font-family: 'xiaozhong',sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: #666;
-    line-height: 1.5;
+.jumbotron p{
+    font-size: 14px;
 }
 @media (min-width: 768px){
     .h-body div {
         width: 1.5em;
         float: left;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 700;
         color: #666;
         line-height: 1.5;
     }
@@ -305,8 +320,13 @@ nav a{
 }
 .page-header a{
     color: #777;
+    text-decoration: none;
+    cursor: pointer;
 }
 .page-header a:hover{
+    color: #049fbb;
+}
+.page-header .active{
     color: #049fbb;
 }
 .sidebar {
@@ -379,6 +399,9 @@ aside .widget h2{
 .pager{
     margin: 48px;
 }
+.pager li a{
+    cursor: pointer;
+}
 .u-textCenter p{
     margin-bottom: 30px;
 }
@@ -407,7 +430,6 @@ aside .widget h2{
         display: none;
     }
     .what-we-do .summary {
-        text-align: center;
         font-size: 16px;
         font-weight: 300;
         color: #666;
